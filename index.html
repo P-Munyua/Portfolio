@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Kiongera Munyua - Developer & Data Analyst</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-bg: #f8f9fa;
+            --dark-text: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            padding-top: 56px;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .skill-card {
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .project-card {
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .bg-light-custom {
+            background-color: var(--light-bg);
+        }
+        
+        .social-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+            margin: 0 10px;
+        }
+        
+        .social-icon:hover {
+            color: var(--secondary-color);
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .hero-section {
+                padding: 80px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Peter Munyua</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Photo -->
+    <section id="home" class="hero-section">
+        <div class="container text-center">
+            <!-- Profile Photo Added Here -->
+            <img src="peter.JPG" alt="Peter Kiongera Munyua" class="profile-img rounded-circle mb-4">
+            <h1 class="display-4 fw-bold">Peter Kiongera Munyua</h1>
+            <p class="lead">Web Developer & Data Analyst</p>
+            <p class="mb-4">Leveraging technology to enhance business efficiency and security</p>
+            <a href="#projects" class="btn btn-light btn-lg me-2">View My Work</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg">Contact Me</a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card skill-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-code-slash display-4 mb-3 text-primary"></i>
+                            <h5 class="card-title">Frontend Development</h5>
+                            <p class="card-text">HTML, CSS, Bootstrap, Tailwind</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card skill-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-server display-4 mb-3 text-primary"></i>
+                            <h5 class="card-title">Backend Development</h5>
+                            <p class="card-text">Django, REST API, Python</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card skill-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-bar-chart-line display-4 mb-3 text-primary"></i>
+                            <h5 class="card-title">Data Analysis</h5>
+                            <p class="card-text">Excel, Power BI, SQL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card skill-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-database display-4 mb-3 text-primary"></i>
+                            <h5 class="card-title">Databases</h5>
+                            <p class="card-text">SQL, PostgreSQL, MySQL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card skill-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-cloud display-4 mb-3 text-primary"></i>
+                            <h5 class="card-title">DevOps & Cloud</h5>
+                            <p class="card-text">Docker, Digital Ocean, Linux</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card skill-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-briefcase display-4 mb-3 text-primary"></i>
+                            <h5 class="card-title">Enterprise Systems</h5>
+                            <p class="card-text">SAP Business One</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light-custom">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">IT Asset Inventory System</h5>
+                            <p class="card-text">A web-based system for tracking IT assets including assignment, return, and disposal processes.</p>
+                            <ul>
+                                <li>Built with Python, Django, HTML, and SQL database</li>
+                                <li>Deployed on Linux servers with Docker containerization</li>
+                                <li>Enhanced asset management efficiency by 40%</li>
+                            </ul>
+                            <div class="badge bg-primary">Django</div>
+                            <div class="badge bg-secondary">Python</div>
+                            <div class="badge bg-success">Docker</div>
+                            <div class="badge bg-info">SQL</div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/P-Munyua" class="btn btn-outline-primary btn-sm">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Sales Management Dashboard</h5>
+                            <p class="card-text">Dashboard for daily sales management and dispatch planning with data visualization capabilities.</p>
+                            <ul>
+                                <li>Integrated MySQL database with Python scripts</li>
+                                <li>Developed frontend with HTML/CSS and Django templating</li>
+                                <li>Improved sales reporting efficiency by 60%</li>
+                            </ul>
+                            <div class="badge bg-primary">Django</div>
+                            <div class="badge bg-secondary">Python</div>
+                            <div class="badge bg-warning">MySQL</div>
+                            <div class="badge bg-info">Data Visualization</div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/P-Munyua" class="btn btn-outline-primary btn-sm">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="https://github.com/P-Munyua" class="btn btn-primary">View More Projects on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">IT Associate</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Phillips Therapeutic Limited | May 2024 - Dec 2024</h6>
+                            <ul class="card-text">
+                                <li>Developed an in-house asset inventory system using Django</li>
+                                <li>Managed firewall endpoints to enhance network security</li>
+                                <li>Provided user support using Windows Remote Desktop and Zoho Ticketing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">SAP Intern</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Phillips Therapeutic Limited | Dec 2023 - Apr 2024</h6>
+                            <ul class="card-text">
+                                <li>Developed web-based sales dashboards using Django</li>
+                                <li>Gained expertise in SAP module navigation and data wrangling</li>
+                                <li>Conducted database querying for business reports</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light-custom">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Let's Work Together</h5>
+                            <p class="card-text">I'm always interested in new opportunities and challenges in web development and data analysis.</p>
+                            <div class="my-4">
+                                <p><i class="bi bi-envelope me-2"></i> peterkiongera5895@gmail.com</p>
+                                <p><i class="bi bi-phone me-2"></i> +254 115314636</p>
+                                <p><i class="bi bi-geo-alt me-2"></i> Nairobi, Kenya</p>
+                            </div>
+                            <div class="my-4">
+                                <a href="https://www.linkedin.com/in/peter-kiongera-941886237/" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                                <a href="https://github.com/P-Munyua" class="social-icon"><i class="bi bi-github"></i></a>
+                                <a href="mailto:peterkiongera5895@gmail.com" class="social-icon"><i class="bi bi-envelope"></i></a>
+                            </div>
+                            <a href="mailto:peterkiongera5895@gmail.com" class="btn btn-primary">Send Message</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p class="mb-0">© 2024 Peter Kiongera Munyua. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
