@@ -97,6 +97,33 @@
             color: white;
         }
         
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        
+        .video-card {
+            transition: all 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
         @media (max-width: 768px) {
             .profile-img {
                 width: 150px;
@@ -129,6 +156,9 @@
                         <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#demos">Demos</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#experience">Experience</a>
                     </li>
                     <li class="nav-item">
@@ -148,6 +178,7 @@
             <p class="lead">Web Developer & Data Analyst</p>
             <p class="mb-4">Leveraging technology to enhance business efficiency and security</p>
             <a href="#projects" class="btn btn-light btn-lg me-2">View My Work</a>
+            <a href="#demos" class="btn btn-outline-light btn-lg me-2">Watch Demos</a>
             <a href="#contact" class="btn btn-outline-light btn-lg">Contact Me</a>
         </div>
     </section>
@@ -223,12 +254,40 @@
                 <div class="col-lg-6">
                     <div class="card project-card h-100">
                         <div class="card-body">
+                            <h5 class="card-title">Point of Sale System</h5>
+                            <p class="card-text">A comprehensive retail management solution for processing sales, managing inventory, and generating business reports.</p>
+                            <ul>
+                                <li>Built with Django, Python, and PostgreSQL for robust performance</li>
+                                <li>Real-time inventory management with automatic stock updates</li>
+                                <li>Sales reporting with analytics and visual dashboard</li>
+                                <li>Customer management with purchase history tracking</li>
+                                <li>Multi-user support with role-based access control</li>
+                                <li>Receipt generation and printing capabilities</li>
+                            </ul>
+                            <div class="badge bg-primary">Django</div>
+                            <div class="badge bg-secondary">Python</div>
+                            <div class="badge bg-success">PostgreSQL</div>
+                            <div class="badge bg-warning">JavaScript</div>
+                            <div class="badge bg-info">Bootstrap</div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/P-Munyua" class="btn btn-outline-primary btn-sm">View on GitHub</a>
+                            <a href="#demos" class="btn btn-outline-success btn-sm ms-2">Watch Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
                             <h5 class="card-title">IT Asset Inventory System</h5>
                             <p class="card-text">A web-based system for tracking IT assets including assignment, return, and disposal processes.</p>
                             <ul>
                                 <li>Built with Python, Django, HTML, and SQL database</li>
                                 <li>Deployed on Linux servers with Docker containerization</li>
                                 <li>Enhanced asset management efficiency by 40%</li>
+                                <li>Barcode scanning integration for asset tracking</li>
+                                <li>Maintenance scheduling and history tracking</li>
+                                <li>Depreciation calculation and reporting</li>
                             </ul>
                             <div class="badge bg-primary">Django</div>
                             <div class="badge bg-secondary">Python</div>
@@ -237,6 +296,7 @@
                         </div>
                         <div class="card-footer">
                             <a href="https://github.com/P-Munyua" class="btn btn-outline-primary btn-sm">View on GitHub</a>
+                            <a href="#demos" class="btn btn-outline-success btn-sm ms-2">Watch Demo</a>
                         </div>
                     </div>
                 </div>
@@ -249,6 +309,9 @@
                                 <li>Integrated MySQL database with Python scripts</li>
                                 <li>Developed frontend with HTML/CSS and Django templating</li>
                                 <li>Improved sales reporting efficiency by 60%</li>
+                                <li>Interactive charts and graphs for data visualization</li>
+                                <li>Real-time sales performance monitoring</li>
+                                <li>Automated report generation and export functionality</li>
                             </ul>
                             <div class="badge bg-primary">Django</div>
                             <div class="badge bg-secondary">Python</div>
@@ -267,8 +330,55 @@
         </div>
     </section>
 
+    <!-- Video Demos Section -->
+    <section id="demos" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Project Demos</h2>
+            <p class="text-center mb-5">Watch demonstrations of my key projects in action</p>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card video-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Point of Sale System Demo</h5>
+                            <p class="card-text">A comprehensive demonstration of the Point of Sale system I developed, showcasing its features and functionality including sales processing, inventory management, and reporting.</p>
+                            <div class="video-container mb-3">
+                                <video controls poster="pos-poster.jpg">
+                                    <source src="point of sale.webm" type="video/webm">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="badge bg-primary">Django</div>
+                            <div class="badge bg-secondary">Python</div>
+                            <div class="badge bg-success">JavaScript</div>
+                            <div class="badge bg-info">SQL Database</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card video-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Asset Manager System Demo</h5>
+                            <p class="card-text">A detailed walkthrough of the Asset Management system, demonstrating asset tracking, assignment, and reporting features.</p>
+                            <div class="video-container mb-3">
+                                <video controls poster="asset-poster.jpg">
+                                    <source src="Asset manager.webm" type="video/webm">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="badge bg-primary">Django</div>
+                            <div class="badge bg-secondary">Python</div>
+                            <div class="badge bg-warning">Bootstrap</div>
+                            <div class="badge bg-info">REST API</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Experience Section -->
-    <section id="experience" class="py-5">
+    <section id="experience" class="py-5 bg-light-custom">
         <div class="container">
             <h2 class="section-title">Professional Experience</h2>
             <div class="row">
@@ -281,6 +391,7 @@
                                 <li>Developed an in-house asset inventory system using Django</li>
                                 <li>Managed firewall endpoints to enhance network security</li>
                                 <li>Provided user support using Windows Remote Desktop and Zoho Ticketing</li>
+                                <li>Implemented Point of Sale system for retail operations</li>
                             </ul>
                         </div>
                     </div>
@@ -294,6 +405,7 @@
                                 <li>Developed web-based sales dashboards using Django</li>
                                 <li>Gained expertise in SAP module navigation and data wrangling</li>
                                 <li>Conducted database querying for business reports</li>
+                                <li>Assisted in requirements gathering for POS system development</li>
                             </ul>
                         </div>
                     </div>
@@ -303,7 +415,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-light-custom">
+    <section id="contact" class="py-5">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="row">
